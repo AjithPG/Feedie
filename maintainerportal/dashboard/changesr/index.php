@@ -3,7 +3,7 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="../../../css.css">
-	<link href='https://fonts.googleapis.com/css?family=Product+Sans' rel='stylesheet'>
+	<link href="https://fonts.googleapis.com/css?family=Product+Sans:500,700&display=swap" rel="stylesheet">
 	<link rel="icon" type="image/png" href="../../../images/logo.png">
 	<title>Feedie | Edit Star Rating</title>
 </head>
@@ -42,7 +42,7 @@
         if ($result->num_rows > 0){
           while ($row = $result->fetch_assoc()){
     ?>
-						<?php echo $i; ?> Star = <input type="text" class="inputvalue" name="r[]" placeholder="<?php echo $i; ?> points" value="<?php echo $row[" r_value "]; ++$i; ?>" />
+						<?php echo $i; ?> Star = <input type="text" class="inputvalue" name="r[]" placeholder="<?php echo $i; ?> points" value="<?php echo $row["r_value"]; ++$i; ?>" />
 						<?php
 
          } //Closing while loop
@@ -56,6 +56,9 @@
       if ( !empty($_POST) ) {
         //To update contents of questions
         echo "Ratings updated";
+      }
+      elseif ( isset($_POST) ) {
+      	;
       }
       else{
         echo "Please fill all the rating fields";

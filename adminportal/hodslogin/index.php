@@ -3,7 +3,7 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 	<script src="../../scripts/material.min.js"></script>
-	<link href='https://fonts.googleapis.com/css?family=Product+Sans' rel='stylesheet'>
+	<link href="https://fonts.googleapis.com/css?family=Product+Sans:500,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="../../styles/material.min.css">
 	<link rel="stylesheet" href="../../styles/main.css">
@@ -53,6 +53,7 @@
 								document.getElementById("password").type = "password";
 							}
 						}
+
 					</script>
 					<div class="mdl-cell mdl-cell--12-col mdl-color-text--red-a400 questions">
 						<?php   
@@ -89,10 +90,9 @@
 				</div>
 			</form>
 		</div>
-		<div class="mdl-layout--large-screen-only mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-phone banner" style="background-image: url('../../images/hodbanner.svg')">
+		<div class="mdl-layout--large-screen-only mdl-cell mdl-cell--6-col-desktop mdl-cell--4-col-phone banner" style="background-image: url('../../images/hodbanner.svg');">
 		</div>
 	</div>
 </body>
 
 </html>
-© 2019 GitHub, Inc.

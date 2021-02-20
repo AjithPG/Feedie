@@ -26,10 +26,10 @@
 					<?php
 						include('../../../db_config.php');
 						session_start();
-						if (!isset($_SESSION["te_username"])){
+						if (!isset($_SESSION["hod_username"])){
 							header('Location: ../../');
 						}
-						echo $_SESSION["te_username"];
+						echo $_SESSION["hod_username"];
 						echo " &middot; ";
 						echo $_SESSION["dept"];
 					?>
@@ -54,14 +54,15 @@
 		<main class="mdl-layout__content">
 			<div class="mdl-layout__tab-panel is-active" id="overview">
 				<section class="section--center mdl-card mdl-grid mdl-grid--no-spacing">
-					<h4 class="mdl-cell mdl-cell--12-col">Subjects</h4>
+					<h4 class="mdl-cell mdl-cell--12-col">Department faculties</h4>
 					<?php
-						$sql = "SELECT class, sub_name, sub_code FROM teachersinfo WHERE te_username = '".$_SESSION["te_username"]."'";
+						include('../../../db_config.php');
+						$sql = "SELECT te_username FROM teachers WHERE dept = '".$_SESSION["dept"]."'";
 						$result = $conn->query($sql);
 						if($result->num_rows > 0) {
 							while($row = $result->fetch_assoc()){
 					?>
-					<div onclick="location.href='feedshow/?class=<?php echo $row["class"]; ?>&sub_code=<?php echo $row["sub_code"] ?>'" class="mdl-cell mdl-cell--12-col mdl-grid subjects">
+					<div onclick="location.href='teachersmenu/?te_username=<?php echo $row["te_username"]; ?>'" class="mdl-cell mdl-cell--12-col mdl-grid subjects">
 						<div class="flex-center mdl-cell mdl-cell--1-col">
 							<span class="mdl-color-text--green-a400">
 								<i class="material-icons">done</i>
@@ -69,7 +70,31 @@
 						</div>
 						<div class="section__text mdl-cell mdl-cell--11-col-desktop mdl-cell--7-col-tablet mdl-cell--3-col-phone">
 							<h5>
-								<?php echo $row["sub_name"]; ?> (<?php echo $row["class"]; ?>)
+								<?php echo $row["te_username"]; ?>
+							</h5>
+						</div>
+					</div>
+					<?php
+							}
+						}
+					?>
+					<h4 class="mdl-cell mdl-cell--12-col">Other Department's Collabrating Teachers</h4>
+					<?php
+						include('../../../db_config.php');
+						$sql = "SELECT te_username FROM teachers WHERE dept NOT LIKE '".$_SESSION["dept"]."' AND te_username = ANY (SELECT te_username FROM teachersinfo WHERE class_dept LIKE '".$_SESSION["dept"]."')";
+						$result = $conn->query($sql);
+						if($result->num_rows > 0) {
+							while($row = $result->fetch_assoc()){
+					?>
+					<div onclick="location.href='teachersmenu/?te_username=<?php echo $row["te_username"]; ?>'" class="mdl-cell mdl-cell--12-col mdl-grid subjects">
+						<div class="flex-center mdl-cell mdl-cell--1-col">
+							<span class="mdl-color-text--green-a400">
+								<i class="material-icons">done</i>
+							</span>
+						</div>
+						<div class="section__text mdl-cell mdl-cell--11-col-desktop mdl-cell--7-col-tablet mdl-cell--3-col-phone">
+							<h5>
+								<?php echo $row["te_username"]; ?>
 							</h5>
 						</div>
 					</div>
@@ -90,7 +115,7 @@
 						</div>
 						<div class="section__text mdl-cell mdl-cell--11-col-desktop mdl-cell--7-col-tablet mdl-cell--3-col-phone">
 							<h5>
-								Name: <span style="text-transform: capitalize;"><?php echo $_SESSION["te_username"]; ?></span>
+								Name: <span style="text-transform: capitalize;"><?php echo $_SESSION["hod_username"]; ?></span>
 							</h5>
 						</div>
 					</div>

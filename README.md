@@ -12,9 +12,20 @@
 	</sub>
 </div>
 
+---
+
 [![Build Status](https://travis-ci.org/FuseOrg/Feedie.svg?branch=master)](https://travis-ci.org/FuseOrg/Feedie) [![GitHub release](https://img.shields.io/github/release/FuseOrg/Feedie.svg)](https://github.com/FuseOrg/Feedie/releases/latest) [![repo size](https://img.shields.io/github/repo-size/FuseOrg/Feedie.svg)](https://github.com/FuseOrg/Feedie/archive/master.zip) [![license](https://img.shields.io/github/license/FuseOrg/Feedie.svg)](https://github.com/liyasthomas/Feedie/blob/master/LICENSE) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/FuseOrg/Feedie/issues) [![Website](https://img.shields.io/website-up-down-ff69b4-ff69b4/https/shields.io.svg?label=Fuse%20Org)](https://fuse-org.firebaseapp.com) [![Donate](https://img.shields.io/badge/$-donate-ff69b4.svg)](https://www.paypal.me/liyascthomas)
 
-Student-faculty feedback system developed under [Fuse Org](https://github.com/fuseorg)
+# <img src="images/logo.png" alt="Templates" width="32"> Feedie
+
+### Student-faculty feedback system developed under [Fuse Org](https://github.com/fuseorg)
+
+<div align="center">
+  <br>
+  <img src="images/screely.png" alt="Feedie" width="100%">
+  <img src="images/screely2.png" alt="Feedie" width="100%">
+  <br>
+</div>
 
 ## Getting Started
 
@@ -34,7 +45,7 @@ Steps that tell you how to get a development envirnoment running
 
 1. Download the whole zip/clone the repo
 2. Copy files to server hosting location
-3. Import predefined database into phpMyAdmin
+3. Import pre-defined database into phpMyAdmin
 
 ## Running the tests
 
@@ -48,10 +59,6 @@ Test the application with
 2. Highest possible input
 3. Most common inputs
 
-```
-Will be explained more later
-```
-
 ### And coding style tests
 
 Steps to test in coding style for developers, programmers or white-box testers
@@ -60,15 +67,11 @@ Steps to test in coding style for developers, programmers or white-box testers
 2. Save it successfully
 3. Try appropriate input data and verify the output obtained
 
-```
-Will be explained more later
-```
-
 ## Deployment
 
 Steps to deploy the application successfully
 
-1. Start Web server(Apache) and Database server(phpMyAdmin)
+1. Start Web server (Apache) and Database server (phpMyAdmin)
 2. Host copied project in any localhost, networks or DNS.
 
 ## Built With
@@ -81,7 +84,7 @@ Steps to deploy the application successfully
 
 ## Contributing
 
-Please read [CONTRIBUTING](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING](CONTRIBUTING.md) for details on our [CODE OF CONDUCT](CODE_OF_CONDUCT.md), and the process for submitting pull requests to us.
 
 ## Continuous Integration
 
